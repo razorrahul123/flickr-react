@@ -143,11 +143,6 @@ const Home = ({ history }) => {
           ) : null}
         </div>
       </div>
-      {/* {loading ? (
-        <div class="spinner-border text-primary" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      ) : null} */}
     </div>
   );
 };
