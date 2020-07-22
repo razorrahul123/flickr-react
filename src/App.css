@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background-color: #f2f2f2;
+  height: 100vh;
+  overflow: auto;
+}
+
+.App .navbar {
+  background-color: #a0d2eb !important;
+  margin-bottom: 10px;
 }
 
 .App-logo {
