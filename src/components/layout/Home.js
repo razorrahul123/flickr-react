@@ -24,6 +24,7 @@ function debounce(func, wait) {
 
 const Home = ({ history }) => {
   const [group, setGroup] = useState(null);
+
   const [submitGroup, setSubmitGroup] = useState(null);
   const [groups, setGroups] = useState([]);
   const [page, setPage] = useState(1);
@@ -77,12 +78,19 @@ const Home = ({ history }) => {
     setPage(currentPage);
   };
 
+  const onEnter = (e) => {
+    if (e.keyCode === 13) {
+      handleSubmit();
+    }
+  };
+
   return (
     <div>
       <div className="container-fluid">
         <div className="row">
           <div className="col-8 col-md-10">
             <AsyncSelect
+              onKeyDown={onEnter}
               isMulti={false}
               loadOptions={debounceOnChangeAsync}
               value={group}
