@@ -13,7 +13,7 @@ import logo from "./assets/flickr-logo.png";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <nav className="navbar navbar-light">
           <NavLink className="navbar-brand" to="/groups">
